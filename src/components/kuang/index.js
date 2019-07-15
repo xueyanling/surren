@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import styles from './index.css'
-// import SiderDemo from '../components/kuang'
+import React from 'react';
+import './kuang.css'
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Sider, Content } = Layout;
-class BasicLayout extends Component {
+class SiderDemo extends React.Component {
   state = {
     collapsed: false,
   };
@@ -16,9 +15,9 @@ class BasicLayout extends Component {
 
   render() {
     return (
-      <Layout className={styles.wrapper}>
-        <Sider trigger={null} collapsible collapsed={this.state.collapsed} >
-          <div className={styles.logo} > 突发预警 </div>
+      <Layout>
+        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+          <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">
               <Icon type="user" />
@@ -35,15 +34,22 @@ class BasicLayout extends Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ background: '#526b86', padding: 0 }}>
+          <Header style={{ background: '#fff', padding: 0 }}>
             <Icon
               className="trigger"
               type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
               onClick={this.toggle}
             />
           </Header>
-          <Content>
-            {this.props.children}
+          <Content
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              background: '#fff',
+              minHeight: 280,
+            }}
+          >
+            Content
           </Content>
         </Layout>
       </Layout>
@@ -51,4 +57,4 @@ class BasicLayout extends Component {
   }
 }
 
-export default BasicLayout;
+export default SiderDemo;
