@@ -1,0 +1,12 @@
+.box{
+    flex:20%;
+    padding: 20px;    
+}
+.list{
+    background: #fff;
+    padding: 10px;
+}
+.list>p{
+    display: flex;
+    justify-content: space-between;
+}
