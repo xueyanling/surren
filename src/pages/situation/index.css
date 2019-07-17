@@ -1,0 +1,41 @@
+.bigbox{
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-around;
+}
+.mapbox{
+    display: flex;
+    padding: 10px 40px;
+    justify-content: space-between;
+    height: 450px;
+    flex-wrap: wrap;
+    
+}
+.mapbox>div{
+    width: 48%;
+    padding: 15px;
+    background: #fff;
+    flex-shrink: 1;
+    margin-top: 20px;
+}
+.mapbox h3{
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+    line-height: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(172, 170, 170);
+    display: flex;
+    justify-content: space-between;
+}
+.mapbox h3 p span{
+    font-weight: normal;
+    font-size: 14px;
+    padding: 15px 10px;
+}
+.active{
+    border-bottom: 2px solid rgb(46, 158, 233);
+}
+.mapbox h3 p span:hover{
+    border-bottom: 2px solid rgb(17, 87, 134);
+}
