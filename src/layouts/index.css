@@ -2,25 +2,36 @@
   height: 100%;
 }
 .logo{
-  font-size: 22px;
+  font-size: 20px;
   height: 64px;
+  line-height: 64px;
+  color: #fff;
+  text-align: center;
+  background: rgb(82, 107, 134);
+}
+.trigger{
+  color: #fff;
+  z-index: 99999999;
+}
+.head{
+   justify-content: space-between;
+   align-items: center;
+}
+.headRight{
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+}
+.select > input{
+  background: pink;
+
+}
+.choose{
+  background: #526b86;
+  border:0;
   color: #fff;
 }
-#components-layout-demo-custom-trigger .trigger {
-  font-size: 28px;
-  line-height: 64px;
-  padding: 0 24px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-#components-layout-demo-custom-trigger .trigger:hover {
-  color: #1890ff;
-}
-
-#components-layout-demo-custom-trigger .logo {
-  height: 42px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
+.choose:hover{
+  background: #526b86;
 }
 

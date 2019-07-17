@@ -1,6 +1,6 @@
 import React from 'react';
 import './kuang.css'
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon} from 'antd';
 const { Header, Sider, Content } = Layout;
 class SiderDemo extends React.Component {
   state = {

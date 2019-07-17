@@ -1,0 +1,26 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.top{
+    height: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+.top_left{
+    width: 49%;
+    background: #fff;
+}
+.top_right{
+    width: 49%;
+    background: #fff;
+}
+.top_title{
+    height: 55px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
