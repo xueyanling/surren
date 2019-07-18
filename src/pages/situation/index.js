@@ -84,5 +84,4 @@ class Overall extends Component {
         })
     }
 }
-
 export default Overall;
