@@ -41,6 +41,10 @@ span{
   flex-direction: column;
   text-align: center;
 }
+.ant-menu-vertical.ant-menu-sub > .ant-menu-item, .ant-menu-vertical-left.ant-menu-sub > .ant-menu-item, .ant-menu-vertical-right.ant-menu-sub > .ant-menu-item, .ant-menu-vertical.ant-menu-sub > .ant-menu-submenu, .ant-menu-vertical-left.ant-menu-sub > .ant-menu-submenu, .ant-menu-vertical-right.ant-menu-sub > .ant-menu-submenu{
+  height: 30px;
+  text-align: center;
+}
 #components-layout-demo-custom-trigger .trigger {
   font-size: 18px;
   line-height: 64px;
