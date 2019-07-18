@@ -8,7 +8,8 @@ body {
 svg{
   font-size: 20px;
 }
-li{
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark.ant-menu-vertical .ant-menu-item, .ant-menu-dark.ant-menu-vertical-left .ant-menu-item, .ant-menu-dark.ant-menu-vertical-right .ant-menu-item{
   display: flex;
   flex-direction: column;
   justify-content: center;

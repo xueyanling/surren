@@ -32,12 +32,12 @@ class Overall extends Component {
                         <h3>
                             <span>实时数据</span>
                             <p>
-                                <span className={styles.active} onClick={this.handleSudden}>
+                                <i className={styles.active} onClick={this.handleSudden}>
                                     突发事件
-                                </span>
-                                <span onClick={this.handleHot}>
+                                </i>
+                                <i onClick={this.handleHot}>
                                     热点事件
-                                </span>
+                                </i>
                             </p>
                         </h3>
                         <ListRight options={this.state.list}></ListRight>
