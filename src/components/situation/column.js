@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 // import * as am4maps from "@amcharts/amcharts4/maps";
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+// import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 // import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 class column extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class column extends Component {
     }
     componentDidMount(){
         // Themes begin
-am4core.useTheme(am4themes_animated);
+// am4core.useTheme(am4themes_animated);
 // Themes end
 
 // Create chart instance
@@ -39,25 +39,7 @@ chart.data = [{
 }, {
   "country": "India",
   "visits": 984
-}, {
-  "country": "Spain",
-  "visits": 711
-}, {
-  "country": "Netherlands",
-  "visits": 665
-}, {
-  "country": "Russia",
-  "visits": 580
-}, {
-  "country": "South Korea",
-  "visits": 443
-}, {
-  "country": "Canada",
-  "visits": 441
-}, {
-  "country": "Brazil",
-  "visits": 395
-}];
+} ];
 
 // Create axes
 

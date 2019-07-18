@@ -5,20 +5,21 @@ import MapLeft from '../../components/situation/mapLeft'
 import ListRight from '../../components/situation/listRight'
 import City from '../../components/situation/city'
 import Column from '../../components/situation/column'
+import axios from 'axios'
+
 class Overall extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            list:[],
+            numData:[]
+         };
     }
     render() {
         return (
             <div>
                 <div className={styles.bigbox}>
-                 <SituationItem></SituationItem>
-                 <SituationItem></SituationItem>
-                 <SituationItem></SituationItem>
-                 <SituationItem></SituationItem>
-                 <SituationItem></SituationItem>
+                 <SituationItem numlist={this.state.numData}></SituationItem>
                 </div>
                 <div className={styles.mapbox}>
                     <div>
@@ -31,15 +32,15 @@ class Overall extends Component {
                         <h3>
                             <span>实时数据</span>
                             <p>
-                                <span className={styles.active}>
+                                <span className={styles.active} onClick={this.handleSudden}>
                                     突发事件
                                 </span>
-                                <span>
+                                <span onClick={this.handleHot}>
                                     热点事件
                                 </span>
                             </p>
                         </h3>
-                        <ListRight></ListRight>
+                        <ListRight options={this.state.list}></ListRight>
                         <div>      
                         </div>
                     </div>
@@ -54,6 +55,33 @@ class Overall extends Component {
                 </div>
             </div>
         );
+    }
+    componentDidMount(){
+        axios.get('/api/sudden').then(({data})=>{
+            this.setState({
+                list:data.list
+            })
+        })
+        axios.get('/api/num').then(({data})=>{
+            this.setState({
+                numData:data.list
+            })
+        })
+        
+    }
+    handleHot = () =>{
+        axios.get('/api/hot').then(({data})=>{
+            this.setState({
+                list:data.list
+            })
+        })
+    }
+    handleSudden = () =>{
+        axios.get('/api/sudden').then(({data})=>{
+            this.setState({
+                list:data.list
+            })
+        })
     }
 }
 export default Overall;
