@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styles from './index.css'
 import router from 'umi/router'
-import { Layout, Menu, Icon ,Input , Avatar,Popover, Button,LocaleProvider ,Select } from 'antd';
+import { Layout, Menu, Icon ,Input , Avatar,Popover, Button,LocaleProvider } from 'antd';
 import en_US from 'antd/lib/locale-provider/en_US';
+import Tablange from '../components/tabslange'
+import Index from '../components/CompentLange'
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
-const { Option } = Select;
 class BasicLayout extends Component {
   state = {
     collapsed: false,
@@ -20,14 +21,14 @@ class BasicLayout extends Component {
   
   render() {
     return (
-      <LocaleProvider locale={en_US}>
+      // <LocaleProvider locale={en_US}>
       <Layout className={styles.wrapper}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed} >
           <div className={styles.logo} >突发预警 </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} mode="vertical">
-            <Menu.Item key="1" onClick={()=>this.handle()}>
+            <Menu.Item key="1" onClick={()=>this.handle()} className={styles.items}>
               <Icon type="user" />
-              <span>整体态势</span>
+              <span><Index /></span>
             </Menu.Item>
             <Menu.Item key="2" onClick={()=>this.handleContent()}>
               <Icon type="upload" />
@@ -42,10 +43,13 @@ class BasicLayout extends Component {
                 </span>
               }
             >
-              <Menu.Item key="9">账号行为</Menu.Item>
+              <Menu.Item key="9" >账号行为</Menu.Item>
               <Menu.Item key="10">群组特征</Menu.Item>
             </SubMenu>
-            
+            <Menu.Item key="3" onClick={()=>this.handleGuan()}>
+              <Icon type="upload" />
+              <span>关联分析</span>
+            </Menu.Item>
             <Menu.Item key="4">
               <Icon type="user" />
               <span>监测配置</span>
@@ -108,11 +112,7 @@ class BasicLayout extends Component {
                   </Popover>
                 </Menu.Item>
                 <Menu.Item key="2">
-                <Select defaultValue="lucy" style={{ width: 120 }} onChange={()=>this.handleChange}>
-                  <Option value="en">英文</Option>
-                  <Option value="cn">中文</Option>
-                  <Option value="fr">法文</Option>
-                </Select>
+               <Tablange/>
                 </Menu.Item>
               </Menu>
             </div>
@@ -123,7 +123,7 @@ class BasicLayout extends Component {
           </Content>
         </Layout>
       </Layout>
-      </LocaleProvider>
+      // </LocaleProvider>
     );
   }
   handle(){
@@ -134,6 +134,9 @@ class BasicLayout extends Component {
   }
   handleChange(value){
     console.log(value)
+  }
+  handleGuan(){
+    router.push('/analysis')
   }
 }
 

@@ -10,6 +10,7 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.5.5",
     "@amcharts/amcharts4-geodata": "^4.1.6",
+    "@antv/f2": "^3.3.9",
     "antd": "^3.19.5",
     "dva": "^2.6.0-beta.6",
     "react": "^16.8.6",
