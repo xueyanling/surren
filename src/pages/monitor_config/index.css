@@ -1,0 +1,38 @@
+.bigbox, .headbox{
+    padding: 20px;
+   
+}
+.headbox{
+    background: #fff;
+}
+.conbox{
+    margin-top: 20px;
+    padding: 20px;
+}
+.headbox h3{
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+    line-height: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(172, 170, 170);
+    display: flex;
+    justify-content: space-between;
+}
+.headbox h3 p span{
+    font-weight: normal;
+    font-size: 14px;
+    padding: 15px 10px;
+    font-style: normal;
+}
+.active{
+    border-bottom: 2px solid rgb(46, 158, 233);
+}
+.headbox h3 p span:hover{
+    border-bottom: 2px solid rgb(17, 87, 134);
+}
+
+.title{
+    height: 60px;
+    background: skyblue;
+}

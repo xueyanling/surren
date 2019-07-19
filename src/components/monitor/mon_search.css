@@ -1,0 +1,16 @@
+.monbox{
+    padding: 20px ;
+    background: #fff;
+    margin: 20px;
+}
+.searchbox{
+    margin: 20px 0;
+    
+}
+.selectbox{
+    padding: 0 20px;
+}
+
+.no{
+    display: none;
+}
