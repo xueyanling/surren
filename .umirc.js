@@ -26,4 +26,12 @@ export default {
       },
     }],
   ],
+  proxy: {
+    '/api': {
+      target: 'http://localhost:7002',
+      pathRewrite: { '^/api': '' },
+      changeOrigin: true
+    }
+  }
+
 }

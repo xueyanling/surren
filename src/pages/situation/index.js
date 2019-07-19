@@ -58,13 +58,14 @@ class Overall extends Component {
     }
     componentDidMount(){
         axios.get('/api/sudden').then(({data})=>{
+            // console.log(data)
             this.setState({
-                list:data.list
+                list:data 
             })
         })
         axios.get('/api/num').then(({data})=>{
             this.setState({
-                numData:data.list
+                numData:data.list 
             })
         })
         
@@ -72,14 +73,14 @@ class Overall extends Component {
     handleHot = () =>{
         axios.get('/api/hot').then(({data})=>{
             this.setState({
-                list:data.list
+                list:data 
             })
         })
     }
     handleSudden = () =>{
         axios.get('/api/sudden').then(({data})=>{
             this.setState({
-                list:data.list
+                list:data 
             })
         })
     }
