@@ -1,0 +1,33 @@
+.ulbox:nth-child(odd) {
+    background: #f4f6f7;
+    padding: 20px 40px;
+}
+.ulbox:nth-child(even) {
+    background:#fff;
+    padding: 20px 40px;
+}
+.ulbox p{
+    height: 20px;
+    line-height: 20px;  
+}
+.contxt{
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+    font-weight: 700;
+    white-space:normal;
+}
+.from{
+    margin: 0 20px;
+    color: rgb(46, 158, 233);
+}
+.radius{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgb(46, 158, 233);
+    color: rgb(46, 158, 233);
+}

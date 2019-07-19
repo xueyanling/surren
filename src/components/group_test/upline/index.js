@@ -9,7 +9,7 @@ class Upline extends Component {
         this.state = {  };
     }
     componentDidMount(){
-        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        var chart = am4core.create("chartline", am4charts.XYChart);
         var data = [];
         var price1 = 1000, price2 = 1200;
         var quantity = 30000;
@@ -82,7 +82,7 @@ class Upline extends Component {
     }
     render() {
         return (
-            <div id="chartdiv" style={{width:'100%',height:'350px'}}></div>
+            <div id="chartline" style={{width:'100%',height:'400px'}}></div>
         );
     }
 }
