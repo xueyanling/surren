@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Input, Button, Select, DatePicker } from 'antd';
-import Search from './search'
+// import Search from './search'
 import  styles from './mon_search.css'
 import moment from 'moment';
 
@@ -14,16 +14,16 @@ class mon_search extends Component {
     }
     render() {
         const { Option } = Select;
-        const { MonthPicker, RangePicker } = DatePicker;
-        const dateFormat = 'YYYY/MM/DD';
-        const monthFormat = 'YYYY/MM';
+        // const { MonthPicker, RangePicker } = DatePicker;
+        // const dateFormat = 'YYYY/MM/DD';
+        // const monthFormat = 'YYYY/MM';
         const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
         const {display}=this.state
         return (
             <div className={styles.monbox}>
         
                 <div className={styles.searchbox}>
-                    <i style={{marginLeft: 20 }} onClick={this.changeIcon}>v</i>
+                    <i style={{marginLeft: 20 }} onClick={this.changeIcon} className={styles.borderUp}> </i>
                     <Input.Search
                     placeholder="请输入关键字"
                     enterButton="Search"

@@ -5,7 +5,6 @@
 }
 .searchbox{
     margin: 20px 0;
-    
 }
 .selectbox{
     padding: 0 20px;
@@ -13,4 +12,11 @@
 
 .no{
     display: none;
+}
+.borderUp{
+    width:0;
+    height:0;
+    border-width:0 8px 8px;
+    border-style:solid;
+    border-color:transparent transparent #000;
 }

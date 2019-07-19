@@ -23,7 +23,6 @@ chart.zoomControl = new am4maps.ZoomControl();
 
 let homeButton = new am4core.Button();
 homeButton.events.on("hit", restoreContinents);
-
 homeButton.icon = new am4core.Sprite();
 homeButton.padding(7, 5, 7, 5);
 homeButton.width = 30;
