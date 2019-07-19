@@ -8,7 +8,6 @@ body {
 svg{
   font-size: 20px;
 }
-
 .ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark.ant-menu-vertical .ant-menu-item, .ant-menu-dark.ant-menu-vertical-left .ant-menu-item, .ant-menu-dark.ant-menu-vertical-right .ant-menu-item{
   display: flex;
   flex-direction: column;
@@ -19,6 +18,9 @@ svg{
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 17px;
+}
+.ant-menu-vertical > .ant-menu-item, .ant-menu-vertical-left > .ant-menu-item, .ant-menu-vertical-right > .ant-menu-item, .ant-menu-inline > .ant-menu-item, .ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
   font-size: 17px;
 }
 .ant-menu-vertical .ant-menu-submenu, .ant-menu-vertical-left .ant-menu-submenu, .ant-menu-vertical-right .ant-menu-submenu, .ant-menu-inline .ant-menu-submenu{

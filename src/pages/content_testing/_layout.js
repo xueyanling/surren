@@ -11,11 +11,11 @@ class Jiance extends Component {
         return (
             <div className={content.wrapper}>
                 <Aisai/>
-                <p className={content.tabs}>
+                <div className={content.tabs}>
                     <span ref='tab1' className={content.active} onClick={()=>this.tabone()}>监测结果</span>
                     <span ref='tab2' onClick={()=>this.tabtwo()}>监测分析</span>
-                </p>
-                {this.props.children}
+                </div>
+                    {this.props.children}
             </div>
         );
     }

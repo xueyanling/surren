@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from '@amcharts/amcharts4/themes/animated'
-import am4themes_frozen from '@amcharts/amcharts4/themes/frozen'
-am4core.useTheme(am4themes_frozen);
 am4core.useTheme(am4themes_animated);
 class qING extends Component {
     constructor(props) {

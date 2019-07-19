@@ -19,7 +19,7 @@ class Association extends Component {
                     <Input placeholder="Basic usage" style={{width:'70%',margin:'0 10px'}}/>
                     <Button type="primary" style={{width:'10%'}}>搜索实体</Button>
                 </div>
-                <div id="chartdiv" style={{height:'100%'}}></div>
+                <div id="chartdiv" style={{height:'600px'}}></div>
             </div>
         );
     }

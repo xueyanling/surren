@@ -15,14 +15,34 @@
 }
 .content>div{
     width: 48%;
-    height: 400px;
+    /* height: 450px; */
     background: #fff;
     margin: 10px;
+    padding: 10px;
+    overflow: hidden;
 }
 .content>div>h3{
-    line-height: 50px;
-    padding-left: 15px;
+    line-height: 46px;
     border-bottom: 1px solid #ccc;
+    margin-top: -5px;
+}
+.btns{
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns>p{
+    margin: 0;
+}
+.btns>p>span{
+    display: inline-block;
+    padding: 0 10px;
+}
+.btns>p>span.active{
+    display: inline-block;
+    border-bottom: 4px solid #59ced9;
 }
 tspan{
     font-size: 12px;

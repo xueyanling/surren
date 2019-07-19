@@ -6,13 +6,11 @@ import Emotiontwo from '../../../components/emotion/two'
 import Emotionthree from '../../../components/emotion/three'
 import Qushi from '../../../components/qushi'
 import Point from '../../../components/viewpoint'
+
 class Fenxi extends Component {
     constructor(props) {
         super(props);
         this.state = {  };
-    }
-    componentDidMount(){
-
     }
     render() {
         return (
@@ -51,13 +49,13 @@ class Fenxi extends Component {
                     </div>
                 </div>
                 <div className={fenxi.bottom}>
-                    <p className={fenxi.point}>
+                    <div className={fenxi.point}>
                         <b>主要观点</b>
                         <div className={fenxi.pointTabs}>
                             <span ref='tab1' className={fenxi.current} onClick={()=>this.change()}>Telegram</span>
                             <span ref='tab2' onClick={()=>this.changes()}>WhatsApp</span>
                         </div>
-                    </p>
+                    </div>
                     <Point/>
                     <Point/>
                     <Point/>
