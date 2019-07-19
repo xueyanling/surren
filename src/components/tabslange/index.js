@@ -24,7 +24,7 @@ class Logotufa extends Component {
 		const langMenu = (
 			<Menu  selectedKeys={[ selectedLang ]} onClick={this.changeLang}>
 				{locales.map((locale) => (
-					<Menu.Item key={locale}>
+					<Menu.Item key={locale} style={{zIndex:'99999999',marginTop:'22px'}}>
 						<span role="img" aria-label={languageLabels[locale]}>
 							<img src={languageIcons[locale]} alt="" />
 						</span>

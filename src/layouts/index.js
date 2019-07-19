@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import styles from './index.css'
 import router from 'umi/router'
-import { Layout, Menu, Icon ,Input , Avatar,Popover, Button,LocaleProvider } from 'antd';
-import en_US from 'antd/lib/locale-provider/en_US';
+import { Layout, Menu, Icon ,Input , Avatar,Popover, Button } from 'antd';
+import Link from 'umi/link';
 import Tablange from '../components/tabslange'
 import Index from '../components/CompentLange'
+import Contestlage from '../components/CompentLange/Contentest'
+import Guroptest from '../components/CompentLange/guroptest'
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
@@ -32,19 +34,19 @@ class BasicLayout extends Component {
             </Menu.Item>
             <Menu.Item key="2" onClick={()=>this.handleContent()}>
               <Icon type="upload" />
-              <span>内容监测</span>
+              <span><Contestlage/></span>
             </Menu.Item>
             <SubMenu
               key="sub3"
               title={
                 <span>
                   <Icon type="setting" />
-                  <span>群组监测</span>
+                  <p><Guroptest/></p>
                 </span>
               }
             >
-              <Menu.Item key="9" >账号行为</Menu.Item>
-              <Menu.Item key="10">群组特征</Menu.Item>
+              <Menu.Item key="9" ><Link to='/group_testing/group_zhanghao'>账号行为</Link></Menu.Item>
+              <Menu.Item key="10"><Link to='/group_testing/group_charact'>群组特征</Link></Menu.Item>
             </SubMenu>
             <Menu.Item key="3" onClick={()=>this.handleGuan()}>
               <Icon type="upload" />
@@ -59,7 +61,7 @@ class BasicLayout extends Component {
               title={
                 <span>
                   <Icon type="setting" />
-                  <span>采集配置</span>
+                  <p>采集配置</p>
                 </span>
               }
             >
@@ -74,7 +76,7 @@ class BasicLayout extends Component {
               title={
                 <span>
                   <Icon type="setting" />
-                  <span>系统管理</span>
+                  <p>系统管理</p>
                 </span>
               }
             >
@@ -87,7 +89,7 @@ class BasicLayout extends Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header className={styles.head} style={{ background: '#526b86', padding: 0 ,display:'flex' }}>
+          <Header className={styles.head} style={{ background: '#526b86'}}>
             <Icon
               className={styles.trigger}
               type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
@@ -112,13 +114,13 @@ class BasicLayout extends Component {
                   </Popover>
                 </Menu.Item>
                 <Menu.Item key="2">
-               <Tablange/>
+               <Tablange className={styles.lange}/>
                 </Menu.Item>
               </Menu>
             </div>
             
           </Header>
-          <Content>
+          <Content className={styles.cont}>
             {this.props.children}
           </Content>
         </Layout>
