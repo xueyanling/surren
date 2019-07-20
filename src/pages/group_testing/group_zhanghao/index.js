@@ -16,7 +16,7 @@ class Zhao extends Component {
     componentDidMount(){
         axios.get('/api/hot').then(({data})=>{
                 this.setState({
-                    saylist:data.list
+                    saylist:data
                 })
         })
     }
@@ -53,8 +53,9 @@ class Zhao extends Component {
         this.refs.hot.classList.add(zhao.active)
         this.refs.sudden.classList.remove(zhao.active)
         axios.get('/api/hot').then(({data})=>{
+            console.log(data)
             this.setState({
-                saylist:data.list
+                saylist:data
             })
         })
     }
@@ -63,7 +64,7 @@ class Zhao extends Component {
         this.refs.sudden.classList.add(zhao.active)
         axios.get('/api/sudden').then(({data})=>{
             this.setState({
-                saylist:data.list
+                saylist:data
             })
         })
     }

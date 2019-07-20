@@ -10,9 +10,10 @@ class Result extends Component {
          };
     }
     componentDidMount(){
-      axios.get('/api/testResult').then(({data})=>{
+      axios.get('/api/resultlist').then(({data})=>{
+        console.log(data)
         this.setState({
-            list:data.data
+            list:data
         })
       })
   }

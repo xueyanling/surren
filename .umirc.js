@@ -28,7 +28,7 @@ export default {
   ],
   proxy: {
     '/api': {
-      target: 'http://localhost:7001',
+      target: 'http://169.254.213.55:7002',
       pathRewrite: { '^/api': '' },
       changeOrigin: true
     }

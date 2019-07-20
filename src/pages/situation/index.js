@@ -58,9 +58,9 @@ class Overall extends Component {
     }
     componentDidMount(){
         axios.get('/api/sudden').then(({data})=>{
-            // console.log(data)
+            console.log(data)
             this.setState({
-                list:data 
+                list:data
             })
         })
         axios.get('/api/num').then(({data})=>{
