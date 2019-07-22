@@ -6,13 +6,23 @@ import Emotiontwo from '../../../components/emotion/two'
 import Emotionthree from '../../../components/emotion/three'
 import Qushi from '../../../components/qushi'
 import Point from '../../../components/viewpoint'
-
+import axios from 'axios'
 class Fenxi extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            list:null
+         };
+    }
+    componentDidMount(){
+        axios.get('/api/point').then(({data})=>{
+            this.setState({
+                list:data
+            })
+        })
     }
     render() {
+        let {list}=this.state
         return (
             <div className={fenxi.wrapper}>
                 <div className={fenxi.top}>
@@ -56,9 +66,16 @@ class Fenxi extends Component {
                             <span ref='tab2' onClick={()=>this.changes()}>WhatsApp</span>
                         </div>
                     </div>
-                    <Point/>
-                    <Point/>
-                    <Point/>
+                    <div>
+                        {
+                            list && list.map((item,index)=>(
+                                <Point option={item} key={index}/>
+                            ))
+                        }
+                    </div>
+                    
+                    {/* <Point/>
+                    <Point/> */}
                 </div>
             </div>
         );

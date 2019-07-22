@@ -21,7 +21,7 @@ class ListRight extends Component {
                                 <i style={{fontStyle:'normal'}}>{item.title}</i>
                             </p>
                             <span>
-                                just now
+                                {item.time}
                             </span>
                         </li>
                     ))

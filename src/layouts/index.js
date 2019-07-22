@@ -52,16 +52,18 @@ class BasicLayout extends Component {
               <Icon type="upload" />
               <span>关联分析</span>
             </Menu.Item>
-            <Menu.Item key="4"><Link to='/monitor_config'>
-              <Icon type="user" />
-              <span>监测配置</span></Link>
+            <Menu.Item key="4">
+              <Link to='/monitor_config'>
+                <Icon type="user" />
+                <span style={{display:'block'}}>监测配置</span>
+              </Link>
             </Menu.Item>
             <SubMenu
               key="sub5"
               title={
                 <span>
-                  <Icon type="setting" />
-                  <p>采集配置</p>
+                  <Icon type="setting"/>
+                  <p >采集配置</p>
                 </span>
               }
             >

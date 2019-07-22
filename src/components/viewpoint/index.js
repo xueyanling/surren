@@ -29,7 +29,7 @@ class Point extends Component {
     
     render() {
         const { likes, dislikes, action } = this.state;
-    const actions = [
+        const actions = [
       <span>
         <Tooltip title="Like">
           <Icon
@@ -52,10 +52,11 @@ class Point extends Component {
       </span>,
       <span>Reply to</span>,
     ];
+    let {option}=this.props
         return (
             <Comment
                 actions={actions}
-                author={<a> Han Solo </a>}
+                author={<a> {option.author} </a>}
                 avatar={
                 <Avatar
                     src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
@@ -64,9 +65,7 @@ class Point extends Component {
                 }
                 content={
                 <p>
-                    We supply a series of design principles, practical patterns and high quality design
-                    resources (Sketch and Axure), to help people create their product prototypes beautifully
-                    and efficiently.
+                    {option.txt}
                 </p>
                 }
                 datetime={

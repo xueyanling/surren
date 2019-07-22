@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
 import Resultlist from '../../../components/monitor/searchlist'
 import result from './index.css'
-import axios from 'axios'
+import {connect} from 'dva'
 class Result extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-              list:null
          };
     }
     componentDidMount(){
-      axios.get('/api/resultlist').then(({data})=>{
-        console.log(data)
-        this.setState({
-            list:data
-        })
+      this.props.dispatch({
+          type:'contentest/listFn'
       })
   }
     render() {
-      let {list} = this.state
+      let {list,ind} = this.props
         return (
           <div className={result.wrapper}>
             <div className={result.top}>
-              <b>列表展示</b>
+              <b>列表展示{this.props.ind}</b>
               <b>总数：<span>666666</span></b>
             </div>
             <Resultlist option={list}/>
@@ -31,4 +27,8 @@ class Result extends Component {
     }
 }
 
-export default Result;
+export default connect(
+    (state)=>{
+      return {...state.contentest}
+    }
+)(Result);
