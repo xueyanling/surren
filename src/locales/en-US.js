@@ -4,7 +4,7 @@ export default {
     'navbar.testContent':'Content monitoring',
     'navbar.testgroup':'Group monitoring',
     'navbar.analysis':'association analysis',
-    'navbar.Monitoring':'Monitoring configuration',
-    'navbar.Acquisition':'Acquisition Configuration',
+    'navbar.monitoring':'Monitoring configuration',
+    'navbar.acquisition':'Acquisition Configuration',
     'navbar.systemt':'system management'
 }  
