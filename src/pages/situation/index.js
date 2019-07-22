@@ -6,7 +6,7 @@ import ListRight from '../../components/situation/listRight'
 import City from '../../components/situation/city'
 import Column from '../../components/situation/column'
 import axios from 'axios'
-
+import {connect} from  'dva'
 class Overall extends Component {
     constructor(props) {
         super(props);
@@ -31,7 +31,7 @@ class Overall extends Component {
                     <div>
                         <h3>
                             <span>实时数据</span>
-                            <p>
+                            <p ref='pp'>
                                 <i className={styles.active} onClick={this.handleSudden}>
                                     突发事件
                                 </i>
@@ -58,17 +58,25 @@ class Overall extends Component {
     }
     componentDidMount(){
         axios.get('/api/sudden').then(({data})=>{
-            console.log(data)
+            // console.log(data)
             this.setState({
                 list:data
             })
         })
         axios.get('/api/num').then(({data})=>{
+            // console.log(data)
             this.setState({
                 numData:data.list 
             })
         })
-        
+        let child=[...this.refs.pp.children]
+        let ind=0
+        this.refs.pp.addEventListener('click',function(e){
+            let target=e.target
+            child[ind].classList.remove(styles.active)
+            target.classList.add(styles.active)
+            ind=child.indexOf(target)
+        })
     }
     handleHot = () =>{
         axios.get('/api/hot').then(({data})=>{
@@ -84,5 +92,12 @@ class Overall extends Component {
             })
         })
     }
+
 }
+// const mapState=(state)=>({
+//     ...state
+// })
+// const mapDispatch=(dispatch)=>({
+   
+// })
 export default Overall;

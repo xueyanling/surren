@@ -9,10 +9,10 @@ class index extends Component {
         };
     }
     componentDidMount(){
-        let num = Math.floor(Math.random()*(30000-3000)+ 3000);
-        this.setState({
-            num
-        })
+        // let num = Math.floor(Math.random()*(30000-3000)+ 3000);
+        // this.setState({
+        //     num
+        // })
     }
 
     render() {
