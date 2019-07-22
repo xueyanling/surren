@@ -83,10 +83,20 @@ class Fenxi extends Component {
     change(){
         this.refs.tab1.classList.add(fenxi.current)
         this.refs.tab2.classList.remove(fenxi.current)
+        axios.get('/api/point').then(({data})=>{
+            this.setState({
+                list:data
+            })
+        })
     }
     changes(){
         this.refs.tab1.classList.remove(fenxi.current)
         this.refs.tab2.classList.add(fenxi.current)
+        axios.get('/api/point2').then(({data})=>{
+            this.setState({
+                list:data
+            })
+        })
     }
 }
 

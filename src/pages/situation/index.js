@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SituationItem from '../../components/situation'
 import styles from './index.css'
 import MapLeft from '../../components/situation/mapLeft'
-import ListRight from '../../components/situation/listRight'
+import ListRight from '../../components/situation/ListRight'
 import City from '../../components/situation/city'
 import Column from '../../components/situation/column'
 import axios from 'axios'

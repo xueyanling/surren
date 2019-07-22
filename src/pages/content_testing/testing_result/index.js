@@ -14,7 +14,7 @@ class Result extends Component {
       })
   }
     render() {
-      let {list,ind} = this.props
+      let {list} = this.props
         return (
           <div className={result.wrapper}>
             <div className={result.top}>

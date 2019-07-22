@@ -7,6 +7,10 @@ import Tablange from '../components/tabslange'
 import Index from '../components/CompentLange'
 import Contestlage from '../components/CompentLange/Contentest'
 import Guroptest from '../components/CompentLange/guroptest'
+import Analysis from '../components/CompentLange/analysis'
+import Monitor from '../components/CompentLange/monitor'
+import Acquist from '../components/CompentLange/acquisition'
+import System from '../components/CompentLange/system'
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 const { Search } = Input;
@@ -50,12 +54,12 @@ class BasicLayout extends Component {
             </SubMenu>
             <Menu.Item key="3" onClick={()=>this.handleGuan()}>
               <Icon type="upload" />
-              <span>关联分析</span>
+              <span><Analysis/></span>
             </Menu.Item>
             <Menu.Item key="4">
               <Link to='/monitor_config'>
                 <Icon type="user" />
-                <span style={{display:'block'}}>监测配置</span>
+                <span style={{display:'block'}}><Monitor/></span>
               </Link>
             </Menu.Item>
             <SubMenu
@@ -63,7 +67,7 @@ class BasicLayout extends Component {
               title={
                 <span>
                   <Icon type="setting"/>
-                  <p >采集配置</p>
+                  <p ><Acquist/></p>
                 </span>
               }
             >
@@ -78,7 +82,7 @@ class BasicLayout extends Component {
               title={
                 <span>
                   <Icon type="setting" />
-                  <p>系统管理</p>
+                  <p><System/></p>
                 </span>
               }
             >
