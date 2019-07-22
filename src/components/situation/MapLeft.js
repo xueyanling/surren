@@ -3,11 +3,16 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
+ 
+import axios from 'axios'
+
 am4core.useTheme(am4themes_animated);
 class MapLeft extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+          mapData:[]
+         };
     }
     componentDidMount(){
         let chart = am4core.create("chartdiv1", am4maps.MapChart);
@@ -17,6 +22,7 @@ title.text = "[bold font-size: 20]Population of the World in 2011[/]\nsource: Ga
 title.textAlign = "middle";
 let restoreContinents = function(){
   chart.goHome();
+  console.log(123456)
 };
 // Zoom control
 chart.zoomControl = new am4maps.ZoomControl();
@@ -445,7 +451,7 @@ let mapData = [
   { "id":"ZM", "name":"Zambia", "value":13474959, "color":chart.colors.getIndex(2) },
   { "id":"ZW", "name":"Zimbabwe", "value":12754378, "color":chart.colors.getIndex(2) }
 ];
-
+ 
 for(var i = 0; i < mapData.length; i++) {
     mapData[i].latitude = latlong[mapData[i].id].latitude;
     mapData[i].longitude = latlong[mapData[i].id].longitude;

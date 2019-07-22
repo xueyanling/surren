@@ -6,7 +6,9 @@ import axios from 'axios'
 class Monitoring extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            ind:0
+         };
     }
     render() {
         return (
@@ -15,7 +17,7 @@ class Monitoring extends Component {
                 <div className={styles.conbox}>
                 <div className={styles.headbox}>
                         <h3>
-                        <p>
+                        <p ref="pp">
                             <span  className={styles.active} onClick={this.handleMessage}>
                                 信息
                             </span>
@@ -33,6 +35,16 @@ class Monitoring extends Component {
                 </div>
             </div>
         );
+    }
+    componentDidMount(){
+        let child=[...this.refs.pp.children]
+        let ind=0
+        this.refs.pp.addEventListener('click',function(e){
+            let target=e.target
+            child[ind].classList.remove(styles.active)
+            target.classList.add(styles.active)
+            ind=child.indexOf(target)
+        })
     }
     handleMessage=()=>{
         router.push('/monitor_config/message')
